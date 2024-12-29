@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 // import FeatureCard from ""
 
@@ -8,36 +9,13 @@ import Gallery from "./components/Gallery";
 import EducationFeatures from "./components/Testimonials";
 import TestimonialSection from "./components/TestimonialSection";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 export default function Page() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="flex items-center justify-between p-6">
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-purple-200 rounded-full"></div>
-          <span className="text-xl font-bold">PetShow</span>
-        </div>
-
-        <div className="flex items-center space-x-6">
-          <a href="#" className="text-gray-600 hover:text-gray-900">
-            Home
-          </a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">
-            Collection
-          </a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">
-            All Pet
-          </a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">
-            Contact
-          </a>
-          <button className="px-6 py-2 bg-black text-white rounded-full hover:bg-gray-800">
-            Login
-          </button>
-        </div>
-      </nav>
-
+      {/* Header */}
+      <Header />
       {/* Hero Section */}
       <div className="relative max-w-6xl mx-auto">
         {/* Floating Images */}
@@ -119,7 +97,6 @@ export default function Page() {
           <div className="w-2 h-2 bg-gray-800 rounded-full"></div>
           <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
         </div> */}
-
         {/* Features Section */}
         <div className="w-screen bg-purple-50 py-20 mt-20 -mx-[50vw] relative left-1/2 right-1/2">
           <div className="max-w-6xl mx-auto px-4">
