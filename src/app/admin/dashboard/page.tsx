@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Camera, Pencil, Trash } from "lucide-react";
 import axios from "axios";
-import { uploadToS3 } from "@/app/utils/s3";
+import { uploadToS3, deleteFromS3 } from "@/app/utils/s3";
 
 interface User {
   id: string;
@@ -83,7 +83,17 @@ const AdminDashboard = () => {
     setIsEditing(true);
   };
 
-  const handleDelete = async (id: string) => {
+  const handleDelete = async (id: string, profileImage: string) => {
+    if (!confirm("Are you sure you want to delete this member?")) return;
+
+    if (profileImage) {
+      try {
+        await deleteFromS3(profileImage);
+      } catch (error) {
+        console.error("Failed to delete image from S3", error);
+      }
+    }
+
     try {
       await axios.delete(`/api/members`, { data: { id } });
       setUsers(users.filter((user) => user.id !== id));
@@ -252,7 +262,7 @@ const AdminDashboard = () => {
                     <Pencil className="h-5 w-5" />
                   </button>
                   <button
-                    onClick={() => handleDelete(user.id)}
+                    onClick={() => handleDelete(user.id, user.profileImage)}
                     className="text-red-600 hover:text-red-900"
                   >
                     <Trash className="h-5 w-5" />

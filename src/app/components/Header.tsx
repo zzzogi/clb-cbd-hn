@@ -25,9 +25,9 @@ const Header = () => {
         <Link href="#" className="text-gray-600 hover:text-gray-900">
           Góp ý
         </Link>
-        <button className="px-6 py-2 bg-black text-white rounded-full hover:bg-gray-800">
+        {/* <button className="px-6 py-2 bg-black text-white rounded-full hover:bg-gray-800">
           Login
-        </button>
+        </button> */}
       </div>
     </nav>
   );
