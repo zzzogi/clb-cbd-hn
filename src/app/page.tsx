@@ -5,9 +5,8 @@ import Image from "next/image";
 import Divider from "./components/Devider";
 import HeroSection from "./components/HeroSecion";
 import FeatureCard from "./components/FeatureCard";
-import FeatureSection from "./components/FeatureSection";
+import VideoFeatureSection from "./components/VideoFeatureSection";
 import Gallery from "./components/Gallery";
-import EducationFeatures from "./components/Testimonials";
 import TestimonialSection from "./components/TestimonialSection";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -26,14 +25,13 @@ export default function Page() {
           <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
         </div> */}
       {/* Features Section */}
-      <div className="w-screen bg-purple-50 py-20 mt-20 -mx-[50vw] relative left-1/2 right-1/2">
+      <div className="w-screen bg-purple-50 py-20 -mx-[50vw] relative left-1/2 right-1/2">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Explore our features</h2>
-            <p className="text-gray-600">
-              Lorem ipsum dolor sit amet consectetur. Atellen tesque neque
-              semper odio massa.
-            </p>
+            <h2 className="text-4xl font-bold mb-4">
+              Trang web này có những gì?
+            </h2>
+            <p className="text-gray-600">* * *</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -53,8 +51,8 @@ export default function Page() {
                   />
                 </svg>
               }
-              title="Multi-color Pet"
-              description="Lorem ipsum dolor sit amet consectetur. It is Atellen test."
+              title="Tra thông tin thành viên"
+              description="Khám phá thông tin chi tiết về các thành viên trong cộng đồng một cách nhanh chóng và dễ dàng."
               bgColor="bg-white"
             />
             <FeatureCard
@@ -73,8 +71,8 @@ export default function Page() {
                   />
                 </svg>
               }
-              title="Quality Pet"
-              description="Lorem ipsum dolor sit amet consectetur. It is Atellen test."
+              title="Leo hạng cùng nhau"
+              description="Cùng bạn bè chinh phục các cột mốc mới!"
               bgColor="bg-white"
             />
             <FeatureCard
@@ -93,8 +91,8 @@ export default function Page() {
                   />
                 </svg>
               }
-              title="Doctor Advise"
-              description="Lorem ipsum dolor sit amet consectetur. It is Atellen test."
+              title="Xây dựng quỹ"
+              description="Đóng góp, hỗ trợ và tạo nên nguồn lực chung để thực hiện những dự án ý nghĩa."
               bgColor="bg-white"
             />
             <FeatureCard
@@ -113,8 +111,8 @@ export default function Page() {
                   />
                 </svg>
               }
-              title="Home Delivery"
-              description="Lorem ipsum dolor sit amet consectetur. It is Atellen test."
+              title="Đóng góp ý kiến"
+              description="Nơi bạn có thể chia sẻ ý tưởng, đưa ra nhận xét và góp phần xây dựng cộng đồng tốt đẹp hơn."
               bgColor="bg-white"
             />
           </div>
@@ -123,7 +121,7 @@ export default function Page() {
       {/* <EducationFeatures /> */}
       <Gallery />
       <Divider />
-      <FeatureSection />
+      <VideoFeatureSection />
       <TestimonialSection />
       <Footer />
     </div>
